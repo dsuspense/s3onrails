@@ -1,0 +1,124 @@
+body {
+    	font-family: times, verdana, sans-serif;
+	    font-size: 14px;
+    	color: #333;
+    	text-align: center;
+    	margin: 0;
+    	background: #ffe;
+}
+
+legend {
+    color: #000;
+#    color: #c09;
+	    	font-size: 16px;
+		    font-family: verdana, arial, helvetica, sans-serif;
+		    		font-weight: bold;
+}
+
+a:link, a:visited {
+    	color: #66c;
+#    	color: #c36;
+    	padding: 1px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #dfb;
+    color: #069;
+    padding: 1px;
+}
+
+a#footer {
+    	background: #ffe;
+    color: #000;
+    padding: 1px;
+}
+
+.banner {
+    background-color: #ffe;
+}
+
+.centered {
+    width: 800px;
+	    font-family: times, verdana, sans-serif;
+    	font-size: 14px;
+    	text-align: center;
+	}
+	
+	.left-aligned {
+	    width: 750px;
+	    font-family: times, verdana, sans-serif;
+    	font-size: 14px;
+    	text-align: left;
+	}
+	
+		.right-aligned {
+	    width: 750px;
+	    font-family: times, verdana, sans-serif;
+    	font-size: 14px;
+    	text-align: right;
+	}
+	
+div#footer {
+    font-family: verdana, sans-serif;
+	    clear: center;
+    	margin: 10px 0;
+    	font-size: 10px;
+    	color: #999;
+}
+
+div#flash {
+	    font-family: verdana, sans-serif;
+	    	font-size: 14px;
+	    	font-weight: bold;
+    background-color: #c09;
+    	color: #fff;
+}
+
+h2 {
+    		font-family: verdana, "courier new", courier, monospace;
+    		color: #090;
+    		font-weight: bold;
+    		font-size: 16px;
+}
+
+			hr#rule {
+	    width: 800px;
+	}
+	
+	span#bucket {
+	    	font-size: 22px;
+		    font-family: georgia, verdana, "Lucida Grande", arial, helvetica, sans-serif;
+	}
+
+	span#bucket_count {
+    	font-size: 10px;
+		    font-family: times, verdana, sans-serif;
+	}
+	
+		span#item {
+    color: #069;
+	    	font-size: 18px;
+		    font-family: georgia, verdana, "Lucida Grande", arial, helvetica, sans-serif;
+	}
+	
+			span#item_private {
+	    	font-size: 10px;
+		    font-family: georgia, verdana, "Lucida Grande", arial, helvetica, sans-serif;
+	}
+	
+				span#item_public {
+	    	font-size: 12px;
+		    font-family: georgia, verdana, "Lucida Grande", arial, helvetica, sans-serif;
+	}
+	
+	span#prompt {
+    color: #000;
+	    	font-size: 14px;
+		    font-family: verdana, arial, helvetica, sans-serif;
+}
+	span#ops {
+    color: #000;
+	    	font-size: 9px;
+		    font-family: verdana, arial, helvetica, sans-serif;
+}

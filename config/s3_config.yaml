@@ -1,0 +1,4 @@
+aws_access_key: !!! ENTER YOUR ACCESS KEY HERE !!!
+aws_secret_access_key: !!! ENTER YOUR SECRET ACCESS KEY HERE !!!
+use_ssl: false
+bucket_prefix: 

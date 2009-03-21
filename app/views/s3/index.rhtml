@@ -1,0 +1,53 @@
+<div class="centered">
+
+<fieldset>
+<legend>Buckets</legend>
+
+<h2>Your S3 account has <%= @buckets.size %> buckets, viewing <%= @entries.size %></h2>
+
+<% if @entries.size > 0 %>
+<div class="left-aligned">
+    <p align="center">
+    <% for bucket in @entries %>
+        <% @count = @count + 1 %>
+        <% if (@count % 100) == 0 %>
+            <br><br>
+        <% end %>
+        <span id="bucket_count">[<%= @count %>]</span> 
+        <span id="bucket"><%= link_to bucket.name, :action => 'list_bucket', :bucket_name => bucket.name, :bucket_page => @bucket_page %></span>
+    	<span id="ops">
+      		[ <%= link_to 'Public', :action => 'make_bucket_public', :bucket_name => bucket.name %> |		
+      		    <%= link_to 'Private', :action => 'make_bucket_private', :bucket_name => bucket.name %> |
+      			   <%= link_to 'DELETE', { :action => 'delete_bucket', :bucket_name => bucket.name }, :confirm => "Are you sure you want to delete '" + bucket.name + "'?\nAll items contained in it will be deleted!" %> ]
+       	</span>
+       	<br > 
+    <% end %>
+    </p>
+    </div>
+    <%= link_to '&lt;&lt; First', { :page => 1 } %>
+    <%= link_to '&lt; Prev', { :page => @entry_pages.current.previous } if @entry_pages.current.previous %>
+    <%= link_to 'Next &gt;', { :page => @entry_pages.current.next } if @entry_pages.current.next %> 
+    <%= link_to 'Last &gt;&gt;', { :page => @entry_pages.length } %>
+<% else %>
+    <p>
+    <b>You have no Buckets</b>
+    </p>
+<% end %>
+
+<fieldset>
+<legend>Create</legend>
+<div>
+<%= start_form_tag :action => 'create_bucket' %>
+<p><span id="prompt">Bucket name:</span> <%= text_field 'bucket', 'name' %> <%= submit_tag 'Create bucket' %></p>
+<%= end_form_tag %>
+
+</div>
+</fieldset>
+
+<% if not flash.empty? -%>
+    <div id="flash"><p><%= @flash[:notice] %></p></div>
+<% end -%>
+
+</fieldset>
+
+</div>
